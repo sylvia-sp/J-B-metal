@@ -29,12 +29,12 @@ body {
 /*#region Logo */
 .logo-area {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 .logo-image {
-  width: 100px;
-  height: 132px;
+  width: 80px;
+  height: 80px;
   color: var(--text-dark);
   flex-shrink: 0;
   overflow: visible;
@@ -49,18 +49,10 @@ body {
   /* font-family: 'Audiowide', cursive; */
   font-weight: 400;
   font-family: Montserrat;
+  padding-top: 0px;
+  margin-top: -18px;
 }
-/* .logo:after {
-    border-top: 4px solid var(--text-dark);
-    display: block;
-    position: relative;
- 
-    top: 6px;
-    left: 84px;
-    margin: 0 auto;
-    width: 130px;
-    content: "";
-  } */
+
 .logo:before {
   /* border-top: 5px solid var(--secondary-color); */
   display: block;
@@ -77,6 +69,18 @@ body {
   font-size: 25px;
   content: "metal products";
 }
+
+/* .logo:after {
+    border-top: 4px solid var(--text-dark);
+    display: block;
+    position: relative;
+ 
+    top: 6px;
+    left: 84px;
+    margin: 0 auto;
+    width: 130px;
+    content: "";
+  } */
 /*#endregion */
 
 /*#region Custom Cursor */
@@ -162,7 +166,7 @@ header {
 }
 
 header.scrolled {
-  padding: 0.5rem 5%;
+  /* padding: 0.5rem 5%; */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 /*#endregion */
@@ -696,7 +700,7 @@ footer p {
   }
 
   .logo {
-    font-size: 36px;
+    font-size: 55px;
   }
 
   .logo:after {
@@ -706,10 +710,10 @@ footer p {
   }
 
   .logo:before {
-    left: 79px;
+    left: 92px;
     width: 73px;
-    top: 19px;
-    font-size: 14px;
+    top: 32px;
+    font-size: 21px;
   }
 
   header nav {
