@@ -115,36 +115,36 @@ document.querySelectorAll('.service-card, .stat-box').forEach(el => {
 //Modal popup
 const images = [
     {
-        src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-        caption: 'Beautiful mountain landscape at sunset'
+        src: 'assets/images/mig-welding.jpg',
+        caption: 'Precision in every spark—MIG welding at its finest.'
     },
     {
-        src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800',
-        caption: 'Misty forest with morning light'
+        src: 'assets/images/tig-welding.jpg',
+        caption: 'Precision TIG Welding Services – Flawless brass joints, zero defects, delivered on time. From prototypes to production runs, we fuse perfection into every piece.'
     },
     {
-        src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800',
-        caption: 'Serene lake reflection'
+        src: 'assets/images/laser-cutting.jpg',
+        caption: 'Laser cutting delivers razor-thin kerf, mirror-smooth edges, and zero tool wear on steel, aluminum, brass, titanium, and exotics up to 1.5" thick. From intricate prototypes to high-volume production, we turn your CAD into reality in hours, not days.'
     },
     {
-        src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800',
-        caption: 'Desert canyon at golden hour'
+        src: 'assets/images/shearing.jpg',
+        caption: 'Our Shearing Service – Built for Speed & Precision'
     },
     {
-        src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800',
-        caption: 'Dense green wilderness'
+        src: 'assets/images/press-break-forming.jpg',
+        caption: 'From sheet to shape in seconds. Our 220-ton CNC press brakes deliver ±0.5° bend accuracy on stainless, aluminum, and high-strength alloys up to 1" thick and 14 ft long. Complex geometries, zero orange peel, perfect repeatability—every time'
     },
     {
-        src: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800',
-        caption: 'Peaceful countryside pathway'
+        src: 'assets/images/metal-polishing.jpg',
+        caption: 'From #4 brushed to #8 mirror in 24 hours. Our automated wet-belt and rotary polishers deliver flawless, Ra < 4 µin finishes on stainless, aluminum, brass, and titanium—up to 60" wide and 20 ft long. No haze. No orange peel. Just pure reflection'
     },
     {
-        src: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800',
-        caption: 'Ocean waves meeting the shore'
+        src: 'assets/images/infield-installing.jpg',
+        caption: 'Infield Measuring & Installs – Done Right, First Time, On Your Floor'
     },
     {
-        src: 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=800',
-        caption: 'Dramatic cloudy sky over mountains'
+        src: 'assets/images/bobcad-drawing.jpg',
+        caption: 'Custom Design & Fabrication – Your Vision, Our Precision' //From napkin sketch to finished metal—no idea too complex. Our engineers turn your BobCAD, SolidWorks, or hand-drawn concepts into production-ready parts with ±0.001" accuracy. One-offs, short runs, or full assemblies: laser, brake, weld, polish, ship—all under one roof.
     }
 ];
 
