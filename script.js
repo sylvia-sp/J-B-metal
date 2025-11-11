@@ -7,26 +7,30 @@ window.addEventListener('load', () => {
 
 // Custom Cursor
 const cursor = document.getElementById('cursor');
-const cursorFollower = document.getElementById('cursorFollower');
 
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
-    
-    setTimeout(() => {
-        cursorFollower.style.left = e.clientX + 'px';
-        cursorFollower.style.top = e.clientY + 'px';
-    }, 50);
 });
 
 document.querySelectorAll('a, button, input, textarea').forEach(el => {
     el.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'scale(1.5)';
-        cursorFollower.style.transform = 'scale(1.5)';
+        cursor.style.width = '24px';
+        cursor.style.height = '24px';
+        cursor.style.transform = 'translate(-50%, -50%) scale(1.2)';
+        cursor.style.backgroundColor = 'var(--secondary-color)';
+        cursor.style.borderColor = 'var(--primary-color)';
+        cursor.style.borderWidth = '3px';
+        cursor.style.boxShadow = '0 0 0 2px rgba(26, 26, 26, 0.3)';
     });
     el.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'scale(1)';
-        cursorFollower.style.transform = 'scale(1)';
+        cursor.style.width = '16px';
+        cursor.style.height = '16px';
+        cursor.style.transform = 'translate(-50%, -50%)';
+        cursor.style.backgroundColor = 'var(--primary-color)';
+        cursor.style.borderColor = 'var(--primary-color)';
+        cursor.style.borderWidth = '2px';
+        cursor.style.boxShadow = '0 0 0 2px rgba(255, 255, 255, 0.1)';
     });
 });
 
