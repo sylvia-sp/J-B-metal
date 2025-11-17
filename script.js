@@ -44,6 +44,39 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Product Drawing Parallax Animation
+const productDrawing = document.querySelector('.landing-drawing');
+
+function animateProductDrawing() {
+    if (productDrawing) {
+        const scrollPosition = window.scrollY;
+        const heroSection = document.querySelector('.landing-header');
+        
+        if (heroSection) {
+            const heroHeight = heroSection.offsetHeight;
+            const scrollPercentage = Math.min(scrollPosition / heroHeight, 1);
+            
+            // Parallax effect - moves slower than scroll
+            const translateY = scrollPosition * 0.3;
+            const translateX = scrollPosition * 0.15;
+            const rotate = scrollPosition * 0.05;
+            
+            // Fade out as you scroll
+            const opacity = 1 - (scrollPercentage * 0.7);
+            
+            // Apply transformations
+            productDrawing.style.transform = `translate(${translateX}px, ${translateY}px) rotate(${rotate}deg)`;
+            productDrawing.style.opacity = opacity;
+        }
+    }
+}
+
+// Call on scroll
+window.addEventListener('scroll', animateProductDrawing);
+
+// Initialize on load
+animateProductDrawing();
+
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -115,6 +148,48 @@ document.querySelectorAll('.service-card, .stat-box').forEach(el => {
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+//Scroll progress indicator
+// const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+//    const scrollPercentage = (window.scrollY / scrollHeight) * 100;
+//    progressBar.style.width = Math.min(scrollPercentage, 100) + '%';
+ // Scroll Progress Bar
+ const progressBar = document.getElementById('progressBar');
+ const scrollProgressContainer = document.querySelector('.scroll-progress');
+        
+ function updateScrollProgress() {
+     // Calculate the maximum scrollable height
+     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+     
+     // Calculate current scroll percentage
+     const scrollPercentage = (window.scrollY / scrollHeight) * 100;
+     
+     // Update progress bar width (capped at 100%)
+     progressBar.style.width = Math.min(scrollPercentage, 100) + '%';
+ }
+
+ // Position progress bar at the bottom of the header
+ function positionProgressBar() {
+     if (scrollProgressContainer && header) {
+         const headerHeight = header.offsetHeight;
+         scrollProgressContainer.style.top = headerHeight + 'px';
+     }
+ }
+
+ // Combined scroll event listener
+ window.addEventListener('scroll', () => {
+     updateScrollProgress();
+ });
+
+ // Update progress bar position on resize and load
+ window.addEventListener('resize', () => {
+     positionProgressBar();
+     updateScrollProgress();
+ });
+
+ // Initialize on page load
+ positionProgressBar();
+ updateScrollProgress();
 
 //Modal popup
 const images = [
